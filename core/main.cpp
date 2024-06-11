@@ -7,6 +7,11 @@
 #endif
 
 int main() {
-    Lex lexer;
-    std::cout << lexer.getNextToken() << std::endl;
+    int cur_tok;
+    // print a tip.
+    std::cout << ">";
+
+    while ((cur_tok = Lex::getNextToken()) != EOF) {
+        dumpToken(cur_tok);
+    }
 }
